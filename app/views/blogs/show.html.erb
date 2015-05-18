@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1><strong>Title:</strong></h1>
+  <%= @blog.title %>
+</p>
+
+
+<h3>Posts:</h3>
+<%= @posts.each do |f| %>
+<div> 
+<strong><%= f.title %></strong>
+<br/>
+<p><%= f.content %> </p>
+</div>
+<% end %>
+
+
+
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
+ 
